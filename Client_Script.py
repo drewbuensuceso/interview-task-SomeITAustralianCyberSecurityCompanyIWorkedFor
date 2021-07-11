@@ -4,8 +4,9 @@ import json
 def GET_SEARCH_RESULT(query, elastic_endpoint):
     object = ESM(elastic_endpoint)
     es = object.Check_ES_Conn()
-    search_result = es.Search_Result(query, index=None)
-    return(search_result)
+    if es.error == None:
+        search_result = es.Search_Result(query, index=None)
+        return(search_result)
 
 
 query = {

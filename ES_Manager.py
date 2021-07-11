@@ -1,5 +1,5 @@
 import os
-from elasticsearch import Elasticsearch, RequestError
+from elasticsearch import Elasticsearch, ElasticsearchException
 from config import ElasticSearchDetails
 
 ESDetails = ElasticSearchDetails()
@@ -17,7 +17,7 @@ class ESM():
         try:
             self.es = Elasticsearch(['https://{user}:{password}@{host}:{port}'.format(
                 user=self.username, password=self.password, host=self.host, port=self.port)])
-        except RequestError as e:
+        except ElasticsearchException as e:
             self.error = e
         return self
 

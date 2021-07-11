@@ -7,6 +7,8 @@ def GET_SEARCH_RESULT(query, elastic_endpoint):
     if es.error == None:
         search_result = es.Search_Result(query, index=None)
         return(search_result)
+    else: print(es.error)
+
 
 
 query = {

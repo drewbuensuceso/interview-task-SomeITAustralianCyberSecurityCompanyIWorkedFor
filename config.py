@@ -1,7 +1,6 @@
-
 class ElasticSearchDetails():
     def __init__(self):
-        self.host = 'es-2afeb28-threatdefence-5ae8.aivencloud.com'
-        self.port = 18561
-        self.username = 'avnadmin'
-        self.password = 'nccygba1lqoy8pxb'
+        self.host = 'elastic_host_value'
+        self.port = 'elastic_host_port'
+        self.username = 'ES_Username'
+        self.password = 'ES_Password'

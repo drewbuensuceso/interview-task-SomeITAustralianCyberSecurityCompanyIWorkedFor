@@ -77,7 +77,7 @@ query = {
 
 
 if __name__ == "__main__":
-    x = GET_SEARCH_RESULT(query, elastic_endpoint='https://es-2afeb28-threatdefence-5ae8.aivencloud.com/goto/81eb5d0c993fc4d4a37713383368abb5')
+    x = GET_SEARCH_RESULT(query, elastic_endpoint='https://some-elastic-endpoint-they-gave-me-that-i-cant-show-you')
     result_list = x['aggregations']['2']['buckets']
     results_arr = [['KEYS', 'DOC_COUNTS']]
     total= x['hits']['total']['value']
